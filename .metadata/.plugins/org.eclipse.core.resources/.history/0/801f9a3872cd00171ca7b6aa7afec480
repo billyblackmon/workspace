@@ -1,0 +1,11 @@
+package carma;
+
+import java.awt.Toolkit;
+
+public class CarmaMain {
+
+	public static void main(String[] args) {
+			CarmaController controller =  new CarmaController();
+	}	// end main()
+
+}

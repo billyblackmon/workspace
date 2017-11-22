@@ -1,0 +1,5 @@
+// tunable variables
+	final static int MaxPlayers = 10;		// spec. says 10
+	final static int XFieldPos = 100;		// spec. says 100
+	final static int YFieldPos = 100;		// spec. says 100
+	final static int RunInterval = 1000;	// 10 - 10000 seconds, WAY too long.

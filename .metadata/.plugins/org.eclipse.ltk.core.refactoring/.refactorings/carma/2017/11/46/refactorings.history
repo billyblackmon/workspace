@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;carma.CarmaController.generatePlayers().player&apos; in &apos;carma.CarmaController.generatePlayers()&apos; to field&#x0D;&#x0A;- Original project: &apos;carma&apos;&#x0D;&#x0A;- Original element: &apos;carma.CarmaController.generatePlayers().player&apos;&#x0D;&#x0A;- Field name: &apos;player&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;player&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;carma{CarmaController.java" name="player" selection="1248 39" stamp="1510874019117" static="false" version="1.0" visibility="2"/>
+</session>

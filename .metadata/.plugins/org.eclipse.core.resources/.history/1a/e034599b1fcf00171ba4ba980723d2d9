@@ -1,0 +1,10 @@
+package com.in28mimnutes.rest.webservices.restfulwebservices;
+
+public class HelloWorldBean {
+
+	public HelloWorldBean(String string) {
+		// TODO Auto-generated constructor stub
+		
+	}
+
+}

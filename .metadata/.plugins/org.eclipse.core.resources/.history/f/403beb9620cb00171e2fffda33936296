@@ -1,0 +1,78 @@
+package carma;
+
+
+public class Player {
+	// player properties
+	Thread thread;
+	int xPos;
+	int yPos;
+	int markCount;
+	boolean marked;
+	
+	public Player() {}
+	
+	public Player(
+			Thread thread,
+			int xPos,
+			int yPos,
+			int markCount,
+			boolean marked
+			)
+	{}	// end constructor
+	
+	
+	
+	
+	
+	public Thread getThread() {
+		return thread;
+	}
+
+	public void setThread(Thread thread) {
+		this.thread = thread;
+	}
+
+	public int getxPos() {
+		return xPos;
+	}
+
+	public void setxPos(int xPos) {
+		this.xPos = xPos;
+	}
+
+	public int getyPos() {
+		return yPos;
+	}
+
+	public void setyPos(int yPos) {
+		this.yPos = yPos;
+	}
+
+	public int getMarkCount() {
+		return markCount;
+	}
+
+	public void setMarkCount(int markCount) {
+		this.markCount = markCount;
+	}
+
+	public boolean isMarked() {
+		return marked;
+	}
+
+	public void setMarked(boolean marked) {
+		this.marked = marked;
+	}
+
+	@Override
+	public String toString() {
+		return "Player [thread=" + thread + ", xPos=" + xPos + ", yPos=" + yPos + ", markCount=" + markCount
+				+ ", marked=" + marked + "]";
+	}
+	
+	
+	
+	
+	
+
+}

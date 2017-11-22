@@ -1,0 +1,5 @@
+package com.in28mimnutes.rest.webservices.restfulwebservices;
+
+public class HellowWorldBean {
+
+}

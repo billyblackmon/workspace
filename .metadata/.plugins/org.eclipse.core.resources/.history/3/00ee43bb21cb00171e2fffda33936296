@@ -1,0 +1,17 @@
+package carma;
+
+
+
+
+public class CarmaMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main");
+		
+		CarmaController controller =  new CarmaController();
+		
+
+	}
+
+}

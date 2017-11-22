@@ -1,0 +1,19 @@
+package carma;
+
+
+
+
+public class CarmaMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("main");
+		int MaxPlayers = 2;
+		CarmaController controller =  new CarmaController();
+		
+		
+		
+
+	}
+
+}
