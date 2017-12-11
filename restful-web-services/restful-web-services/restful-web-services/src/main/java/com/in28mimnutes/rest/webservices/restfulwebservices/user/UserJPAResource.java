@@ -25,8 +25,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 public class UserJPAResource {
-
-	
 	
 	@Autowired
 	private UserRepository userRepository;
@@ -38,6 +36,7 @@ public class UserJPAResource {
 	
 	@GetMapping("/jpa/users")
 	public List<User> retrieveAllUsers() {
+		System.out.println("UserJPAResource.retrieveAllUsers()");
 		return userRepository.findAll();
 	}
 
@@ -45,11 +44,11 @@ public class UserJPAResource {
 	public Resource<User> retrieveUser(@PathVariable int id) {
 		Optional<User> user = userRepository.findById(id);
 
-		if (!user.isPresent())
+		if (!user.isPresent()) {
+			System.out.println("UserJPAResource.retrieveUser() - USER NOT PRESENT!");
 			throw new UserNotFoundException("id-" + id);
+		}
 
-		// "all-users", SERVER_PATH + "/users"
-		// retrieveAllUsers
 		Resource<User> resource = new Resource<User>(user.get());
 
 		ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveAllUsers());
@@ -61,8 +60,13 @@ public class UserJPAResource {
 		return resource;
 	}
 
+
 	@DeleteMapping("/jpa/users/{id}")
 	public void deleteUser(@PathVariable int id) {
+		
+		System.out.println("UserJPAResource.deleteUser: id is: " + id);
+		
+		
 		userRepository.deleteById(id);
 	}
 
@@ -75,6 +79,11 @@ public class UserJPAResource {
 	@PostMapping("/jpa/users")
 	public ResponseEntity<Object> createUser(@Valid @RequestBody User user) {
 		User savedUser = userRepository.save(user);
+		
+		
+		System.out.println("UserJPAResource.createUser(): user is: " + user.toString());
+
+		
 
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId())
 				.toUri();
@@ -95,7 +104,7 @@ public class UserJPAResource {
 	}
 **/	
 
-/**
+	/**
 	@PostMapping("/jpa/users/{id}/posts")
 	public ResponseEntity<Object> createPost(@PathVariable int id, @RequestBody Post post) {
 		
@@ -109,14 +118,12 @@ public class UserJPAResource {
 		
 		post.setUser(user);
 		
-		postRepository.save(post);
+	//	postRepository.save(post);
 		
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(post.getId())
 				.toUri();
 
 		return ResponseEntity.created(location).build();
-**/
-
-
+**/		
 }
 

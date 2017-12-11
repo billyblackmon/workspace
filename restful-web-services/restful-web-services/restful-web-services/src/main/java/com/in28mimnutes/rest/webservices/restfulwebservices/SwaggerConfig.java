@@ -18,10 +18,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
 	public static final Contact DEFAULT_CONTACT = new Contact(
-			"Ranga Karanam", "http://www.in28minutes.com", "in28minutes@gmail.com");
+			"Bill Blackmon", "https://github.com/billyblackmon/", "wgblackmonall@gmail.com");
 	
 	public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
-			"Awesome API Title", "Awesome API Description", "1.0",
+			"Bill Blackmon Demo, 2017", "REST/JPA Spring Microservices Demo, 2017/2018", "1.0",
 			"urn:tos", DEFAULT_CONTACT, 
 			"Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
 

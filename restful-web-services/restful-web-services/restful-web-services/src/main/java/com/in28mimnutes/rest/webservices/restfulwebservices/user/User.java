@@ -11,14 +11,12 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
-
-
-// import io.swagger.annotations.ApiModel;
-// import io.swagger.annotations.ApiModelProperty;
-// @ApiModel(description="All details about the user")
-@Entity
+@ApiModel(description="All details about the user")
 // @OneToMany(mappedBy="user")
+@Entity
 public class User {
 
 
